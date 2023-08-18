@@ -1,0 +1,9 @@
+Category,Element
+Identifiers,exception
+Identifiers,InvalidMoneyAmountException
+Identifiers,Exception
+Variable Names,exception
+Variable Names,InvalidMoneyAmountException
+Variable Names,Exception
+Keywords,public
+Keywords,extends  Exception

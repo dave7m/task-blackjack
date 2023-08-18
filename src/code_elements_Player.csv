@@ -1,0 +1,220 @@
+Category,Element
+Identifiers,model
+Identifiers,exception . InvalidMoneyAmountException
+Identifiers,exception
+Identifiers,InvalidMoneyAmountException
+Identifiers,Player
+Identifiers,Person
+Identifiers,int
+Identifiers,wallet
+Identifiers,int
+Identifiers,bet
+Identifiers,int
+Identifiers,playerNumber
+Identifiers,Player
+Identifiers,wallet
+Identifiers,int
+Identifiers,balance
+Identifiers,this . wallet
+Identifiers,this
+Identifiers,wallet
+Identifiers,void
+Identifiers,withdraw
+Identifiers,int
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,this . wallet
+Identifiers,this
+Identifiers,wallet
+Identifiers,amount
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,this . wallet
+Identifiers,this
+Identifiers,wallet
+Identifiers,amount
+Identifiers,void
+Identifiers,receiveMoney
+Identifiers,int
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,this . wallet
+Identifiers,this
+Identifiers,wallet
+Identifiers,amount
+Identifiers,int
+Identifiers,getBet
+Identifiers,bet
+Identifiers,void
+Identifiers,setBet
+Identifiers,int
+Identifiers,bet
+Identifiers,this . bet
+Identifiers,this
+Identifiers,bet
+Identifiers,bet
+Identifiers,int
+Identifiers,getPlayerNumber
+Identifiers,playerNumber
+Identifiers,void
+Identifiers,setPlayerNumber
+Identifiers,int
+Identifiers,newPlayerNumber
+Identifiers,this . playerNumber
+Identifiers,this
+Identifiers,playerNumber
+Identifiers,newPlayerNumber
+Method Signatures,"public   Player () { 
+         wallet   =   100 ; 
+     }"
+Method Signatures,"public   int   balance () { 
+         return  this . wallet ; 
+     }"
+Method Signatures,"public   void   withdraw ( int   amount )   throws  InvalidMoneyAmountException   { 
+         if  ( this . wallet   <   amount   ||   amount   ==   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         } 
+         this . wallet   -=   amount ; 
+     }"
+Method Signatures,"public   void   receiveMoney ( int   amount )   throws  InvalidMoneyAmountException   { 
+         if  ( amount   <=   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         } 
+         this . wallet   +=   amount ;      }"
+Method Signatures,public   int   getBet () { return  bet ; }
+Method Signatures,public   void   setBet ( int   bet ) { this . bet   =   bet ; }
+Method Signatures,public   int   getPlayerNumber () { return  playerNumber ; }
+Method Signatures,public   void   setPlayerNumber ( int   newPlayerNumber ) { this . playerNumber   =   newPlayerNumber ; }
+Variable Names,model
+Variable Names,exception . InvalidMoneyAmountException
+Variable Names,exception
+Variable Names,InvalidMoneyAmountException
+Variable Names,Player
+Variable Names,Person
+Variable Names,int
+Variable Names,wallet
+Variable Names,int
+Variable Names,bet
+Variable Names,int
+Variable Names,playerNumber
+Variable Names,Player
+Variable Names,wallet
+Variable Names,int
+Variable Names,balance
+Variable Names,this . wallet
+Variable Names,this
+Variable Names,wallet
+Variable Names,void
+Variable Names,withdraw
+Variable Names,int
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,this . wallet
+Variable Names,this
+Variable Names,wallet
+Variable Names,amount
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,this . wallet
+Variable Names,this
+Variable Names,wallet
+Variable Names,amount
+Variable Names,void
+Variable Names,receiveMoney
+Variable Names,int
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,this . wallet
+Variable Names,this
+Variable Names,wallet
+Variable Names,amount
+Variable Names,int
+Variable Names,getBet
+Variable Names,bet
+Variable Names,void
+Variable Names,setBet
+Variable Names,int
+Variable Names,bet
+Variable Names,this . bet
+Variable Names,this
+Variable Names,bet
+Variable Names,bet
+Variable Names,int
+Variable Names,getPlayerNumber
+Variable Names,playerNumber
+Variable Names,void
+Variable Names,setPlayerNumber
+Variable Names,int
+Variable Names,newPlayerNumber
+Variable Names,this . playerNumber
+Variable Names,this
+Variable Names,playerNumber
+Variable Names,newPlayerNumber
+Variable Types,private   int
+Variable Types,private   int
+Variable Types,private   int
+Variable Types,public   int
+Variable Types,public   void
+Variable Types,int
+Variable Types,public   void
+Variable Types,int
+Variable Types,public   int
+Variable Types,public   void
+Variable Types,int
+Variable Types,public   int
+Variable Types,public   void
+Variable Types,int
+Keywords,public
+Keywords,private
+Keywords,private
+Keywords,private
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,throws  InvalidMoneyAmountException
+Keywords,throws  InvalidMoneyAmountException
+Keywords,"if  ( this . wallet   <   amount   ||   amount   ==   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         }"
+Keywords,"if  ( amount   <=   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         }"
+Keywords,return  this . wallet ;
+Keywords,return  bet ;
+Keywords,return  playerNumber ;
+Keywords,throw  new   InvalidMoneyAmountException () ;
+Keywords,throw  new   InvalidMoneyAmountException () ;
+Keywords,extends  Person
+Arguments,int   amount
+Arguments,int   amount
+Arguments,int   bet
+Arguments,int   newPlayerNumber
+Arguments,InvalidMoneyAmountException
+Arguments,InvalidMoneyAmountException
+Operators,.
+Operators,=
+Operators,.
+Operators,.
+Operators,<
+Operators,||
+Operators,==
+Operators,new
+Operators,.
+Operators,-=
+Operators,<=
+Operators,new
+Operators,.
+Operators,+=
+Operators,.
+Operators,=
+Operators,.
+Operators,=

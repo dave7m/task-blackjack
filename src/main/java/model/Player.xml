@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" revision="1.0.0" language="Java" filename="Player.java"><package>package <name>model</name>;</package>
+
+
+<import>import <name><name>exception</name><operator>.</operator><name>InvalidMoneyAmountException</name></name>;</import>
+
+<class><specifier>public</specifier> class <name>Player</name> <super_list><extends>extends <super><name>Person</name></super></extends></super_list><block>{
+    <decl_stmt><decl><type><specifier>private</specifier> <name>int</name></type> <name>wallet</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><specifier>private</specifier> <name>int</name></type> <name>bet</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><specifier>private</specifier> <name>int</name></type> <name>playerNumber</name></decl>;</decl_stmt>
+
+    <constructor><specifier>public</specifier> <name>Player</name><parameter_list>()</parameter_list><block>{<block_content>
+        <expr_stmt><expr><name>wallet</name> <operator>=</operator> <literal type="number">100</literal></expr>;</expr_stmt>
+    </block_content>}</block></constructor>
+
+    <comment type="block" format="javadoc">/**
+     * @return the balance of the player's wallet
+     */</comment>
+    <function><type><specifier>public</specifier> <name>int</name></type> <name>balance</name><parameter_list>()</parameter_list><block>{<block_content>
+        <return>return <expr><name><name>this</name><operator>.</operator><name>wallet</name></name></expr>;</return>
+    </block_content>}</block></function>
+
+    <comment type="block" format="javadoc">/**
+     * withdraws a certain amount of money from the player's wallet
+     */</comment>
+    <function><type><specifier>public</specifier> <name>void</name></type> <name>withdraw</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>amount</name></decl></parameter>)</parameter_list> <throws>throws <argument><expr><name>InvalidMoneyAmountException</name></expr></argument></throws> <block>{<block_content>
+        <if_stmt><if>if <condition>(<expr><name><name>this</name><operator>.</operator><name>wallet</name></name> <operator>&lt;</operator> <name>amount</name> <operator>||</operator> <name>amount</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition> <block>{<block_content>
+            <throw>throw <expr><operator>new</operator> <call><name>InvalidMoneyAmountException</name><argument_list>()</argument_list></call></expr>;</throw>
+        </block_content>}</block></if></if_stmt>
+        <expr_stmt><expr><name><name>this</name><operator>.</operator><name>wallet</name></name> <operator>-=</operator> <name>amount</name></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <comment type="block" format="javadoc">/**
+     * Adds a certain amount of money to the Player's wallet. If trying to add a negative number, it throws an exception
+     */</comment>
+    <function><type><specifier>public</specifier> <name>void</name></type> <name>receiveMoney</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>amount</name></decl></parameter>)</parameter_list> <throws>throws <argument><expr><name>InvalidMoneyAmountException</name></expr></argument></throws> <block>{<block_content>
+        <if_stmt><if>if <condition>(<expr><name>amount</name> <operator>&lt;=</operator> <literal type="number">0</literal></expr>)</condition> <block>{<block_content>
+            <throw>throw <expr><operator>new</operator> <call><name>InvalidMoneyAmountException</name><argument_list>()</argument_list></call></expr>;</throw>
+        </block_content>}</block></if></if_stmt>
+        <expr_stmt><expr><name><name>this</name><operator>.</operator><name>wallet</name></name> <operator>+=</operator> <name>amount</name></expr>;</expr_stmt>    </block_content>}</block></function>
+
+    <function><type><specifier>public</specifier> <name>int</name></type> <name>getBet</name><parameter_list>()</parameter_list><block>{<block_content><return>return <expr><name>bet</name></expr>;</return></block_content>}</block></function>
+    <function><type><specifier>public</specifier> <name>void</name></type> <name>setBet</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>bet</name></decl></parameter>)</parameter_list><block>{<block_content><expr_stmt><expr><name><name>this</name><operator>.</operator><name>bet</name></name> <operator>=</operator> <name>bet</name></expr>;</expr_stmt></block_content>}</block></function>
+    <function><type><specifier>public</specifier> <name>int</name></type> <name>getPlayerNumber</name><parameter_list>()</parameter_list><block>{<block_content><return>return <expr><name>playerNumber</name></expr>;</return></block_content>}</block></function>
+    <function><type><specifier>public</specifier> <name>void</name></type> <name>setPlayerNumber</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>newPlayerNumber</name></decl></parameter>)</parameter_list><block>{<block_content><expr_stmt><expr><name><name>this</name><operator>.</operator><name>playerNumber</name></name> <operator>=</operator> <name>newPlayerNumber</name></expr>;</expr_stmt></block_content>}</block></function>
+}</block></class>
+</unit>
