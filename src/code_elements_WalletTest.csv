@@ -1,0 +1,454 @@
+Category,Element
+Identifiers,model
+Identifiers,exception . InvalidMoneyAmountException
+Identifiers,exception
+Identifiers,InvalidMoneyAmountException
+Identifiers,org . junit . jupiter . api . BeforeEach
+Identifiers,org
+Identifiers,junit
+Identifiers,jupiter
+Identifiers,api
+Identifiers,BeforeEach
+Identifiers,org . junit . jupiter . api . Test
+Identifiers,org
+Identifiers,junit
+Identifiers,jupiter
+Identifiers,api
+Identifiers,Test
+Identifiers,org . junit . jupiter . api . Assertions . *
+Identifiers,org
+Identifiers,junit
+Identifiers,jupiter
+Identifiers,api
+Identifiers,Assertions
+Identifiers,*
+Identifiers,WalletTest
+Identifiers,Wallet
+Identifiers,wallet
+Identifiers,BeforeEach
+Identifiers,void
+Identifiers,setUp
+Identifiers,wallet
+Identifiers,Wallet
+Identifiers,Test
+Identifiers,void
+Identifiers,setWallet
+Identifiers,wallet
+Identifiers,Wallet
+Identifiers,assertEquals
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,Test
+Identifiers,void
+Identifiers,setWalletNegative
+Identifiers,wallet
+Identifiers,Wallet
+Identifiers,assertEquals
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,Test
+Identifiers,void
+Identifiers,setWalletZero
+Identifiers,wallet
+Identifiers,Wallet
+Identifiers,assertEquals
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,Test
+Identifiers,void
+Identifiers,putPositive
+Identifiers,wallet . put
+Identifiers,wallet
+Identifiers,put
+Identifiers,InvalidMoneyAmountException
+Identifiers,e
+Identifiers,fail
+Identifiers,assertEquals
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,Test
+Identifiers,void
+Identifiers,putNegative
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,wallet . put
+Identifiers,wallet
+Identifiers,put
+Identifiers,Test
+Identifiers,void
+Identifiers,putZero
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,wallet . put
+Identifiers,wallet
+Identifiers,put
+Identifiers,Test
+Identifiers,void
+Identifiers,withdraw
+Identifiers,wallet . withdraw
+Identifiers,wallet
+Identifiers,withdraw
+Identifiers,InvalidMoneyAmountException
+Identifiers,e
+Identifiers,fail
+Identifiers,assertEquals
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,Test
+Identifiers,void
+Identifiers,withdrawTooMuch
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,wallet . withdraw
+Identifiers,wallet
+Identifiers,withdraw
+Identifiers,Test
+Identifiers,void
+Identifiers,withdrawZero
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,wallet . withdraw
+Identifiers,wallet
+Identifiers,withdraw
+Identifiers,Test
+Identifiers,void
+Identifiers,getAmount
+Identifiers,assertEquals
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,Test
+Identifiers,void
+Identifiers,getAmount0
+Identifiers,wallet . withdraw
+Identifiers,wallet
+Identifiers,withdraw
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,InvalidMoneyAmountException
+Identifiers,e
+Identifiers,fail
+Identifiers,assertEquals
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Method Signatures,"@ BeforeEach 
+     void   setUp ()   { 
+         wallet   =   new   Wallet () ; 
+     }"
+Method Signatures,"@ Test 
+     void   setWallet ()   { 
+         wallet   =   new   Wallet ( 5000 ) ; 
+         assertEquals ( 5000 ,  wallet . getAmount () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   setWalletNegative ()   { 
+         wallet   =   new   Wallet ( - 100 ) ; 
+         assertEquals ( 0 ,  wallet . getAmount () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   setWalletZero ()   { 
+         wallet   =   new   Wallet ( 0 ) ; 
+         assertEquals ( 0 ,  wallet . getAmount () ) ;      }"
+Method Signatures,"@ Test 
+     void   putPositive ()   { 
+         try  { 
+             wallet . put ( 5000 ) ; 
+         }   catch  ( InvalidMoneyAmountException   e )   { 
+             fail () ; 
+         } 
+         assertEquals ( 5100 ,  wallet . getAmount () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   putNegative ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   wallet . put ( - 5000 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   putZero ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   wallet . put ( 0 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   withdraw ()   { 
+         try  { 
+             wallet . withdraw ( 70 ) ; 
+         }   catch  ( InvalidMoneyAmountException   e )   { 
+             fail () ; 
+         } 
+         assertEquals ( 30 ,  wallet . getAmount () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   withdrawTooMuch ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   wallet . withdraw ( 101 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   withdrawZero ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   wallet . withdraw ( 0 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   getAmount ()   { 
+         assertEquals ( 100 ,  wallet . getAmount () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   getAmount0 ()   { 
+         try  { 
+             wallet . withdraw ( wallet . getAmount () ) ; 
+         }   catch  ( InvalidMoneyAmountException   e )   { 
+             fail () ; 
+         } 
+         assertEquals ( 0 ,  wallet . getAmount () ) ; 
+     }"
+Variable Names,model
+Variable Names,exception . InvalidMoneyAmountException
+Variable Names,exception
+Variable Names,InvalidMoneyAmountException
+Variable Names,org . junit . jupiter . api . BeforeEach
+Variable Names,org
+Variable Names,junit
+Variable Names,jupiter
+Variable Names,api
+Variable Names,BeforeEach
+Variable Names,org . junit . jupiter . api . Test
+Variable Names,org
+Variable Names,junit
+Variable Names,jupiter
+Variable Names,api
+Variable Names,Test
+Variable Names,org . junit . jupiter . api . Assertions . *
+Variable Names,org
+Variable Names,junit
+Variable Names,jupiter
+Variable Names,api
+Variable Names,Assertions
+Variable Names,*
+Variable Names,WalletTest
+Variable Names,Wallet
+Variable Names,wallet
+Variable Names,BeforeEach
+Variable Names,void
+Variable Names,setUp
+Variable Names,wallet
+Variable Names,Wallet
+Variable Names,Test
+Variable Names,void
+Variable Names,setWallet
+Variable Names,wallet
+Variable Names,Wallet
+Variable Names,assertEquals
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,Test
+Variable Names,void
+Variable Names,setWalletNegative
+Variable Names,wallet
+Variable Names,Wallet
+Variable Names,assertEquals
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,Test
+Variable Names,void
+Variable Names,setWalletZero
+Variable Names,wallet
+Variable Names,Wallet
+Variable Names,assertEquals
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,Test
+Variable Names,void
+Variable Names,putPositive
+Variable Names,wallet . put
+Variable Names,wallet
+Variable Names,put
+Variable Names,InvalidMoneyAmountException
+Variable Names,e
+Variable Names,fail
+Variable Names,assertEquals
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,Test
+Variable Names,void
+Variable Names,putNegative
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,wallet . put
+Variable Names,wallet
+Variable Names,put
+Variable Names,Test
+Variable Names,void
+Variable Names,putZero
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,wallet . put
+Variable Names,wallet
+Variable Names,put
+Variable Names,Test
+Variable Names,void
+Variable Names,withdraw
+Variable Names,wallet . withdraw
+Variable Names,wallet
+Variable Names,withdraw
+Variable Names,InvalidMoneyAmountException
+Variable Names,e
+Variable Names,fail
+Variable Names,assertEquals
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,Test
+Variable Names,void
+Variable Names,withdrawTooMuch
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,wallet . withdraw
+Variable Names,wallet
+Variable Names,withdraw
+Variable Names,Test
+Variable Names,void
+Variable Names,withdrawZero
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,wallet . withdraw
+Variable Names,wallet
+Variable Names,withdraw
+Variable Names,Test
+Variable Names,void
+Variable Names,getAmount
+Variable Names,assertEquals
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,Test
+Variable Names,void
+Variable Names,getAmount0
+Variable Names,wallet . withdraw
+Variable Names,wallet
+Variable Names,withdraw
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,InvalidMoneyAmountException
+Variable Names,e
+Variable Names,fail
+Variable Names,assertEquals
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Types,Wallet
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,InvalidMoneyAmountException
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,InvalidMoneyAmountException
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,InvalidMoneyAmountException
+Arguments,InvalidMoneyAmountException   e
+Arguments,InvalidMoneyAmountException   e
+Arguments,InvalidMoneyAmountException   e
+Arguments,5000
+Arguments,5000
+Arguments,wallet . getAmount ()
+Arguments,- 100
+Arguments,0
+Arguments,wallet . getAmount ()
+Arguments,0
+Arguments,0
+Arguments,wallet . getAmount ()
+Arguments,5000
+Arguments,5100
+Arguments,wallet . getAmount ()
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   wallet . put ( - 5000 )
+Arguments,- 5000
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   wallet . put ( 0 )
+Arguments,0
+Arguments,70
+Arguments,30
+Arguments,wallet . getAmount ()
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   wallet . withdraw ( 101 )
+Arguments,101
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   wallet . withdraw ( 0 )
+Arguments,0
+Arguments,100
+Arguments,wallet . getAmount ()
+Arguments,wallet . getAmount ()
+Arguments,0
+Arguments,wallet . getAmount ()
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,=
+Operators,new
+Operators,=
+Operators,new
+Operators,.
+Operators,=
+Operators,new
+Operators,-
+Operators,.
+Operators,=
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,-
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.

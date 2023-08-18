@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" revision="1.0.0" language="Java" filename="WalletTest.java"><package>package <name>model</name>;</package>
+
+<import>import <name><name>exception</name><operator>.</operator><name>InvalidMoneyAmountException</name></name>;</import>
+<import>import <name><name>org</name><operator>.</operator><name>junit</name><operator>.</operator><name>jupiter</name><operator>.</operator><name>api</name><operator>.</operator><name>BeforeEach</name></name>;</import>
+<import>import <name><name>org</name><operator>.</operator><name>junit</name><operator>.</operator><name>jupiter</name><operator>.</operator><name>api</name><operator>.</operator><name>Test</name></name>;</import>
+
+<import>import static <name><name>org</name><operator>.</operator><name>junit</name><operator>.</operator><name>jupiter</name><operator>.</operator><name>api</name><operator>.</operator><name>Assertions</name><operator>.</operator><name>*</name></name>;</import>
+
+<class>class <name>WalletTest</name> <block>{
+    <decl_stmt><decl><type><name>Wallet</name></type> <name>wallet</name></decl>;</decl_stmt>
+
+    <function><annotation>@<name>BeforeEach</name></annotation>
+    <type><name>void</name></type> <name>setUp</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><name>wallet</name> <operator>=</operator> <operator>new</operator> <call><name>Wallet</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>setWallet</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><name>wallet</name> <operator>=</operator> <operator>new</operator> <call><name>Wallet</name><argument_list>(<argument><expr><literal type="number">5000</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">5000</literal></expr></argument>, <argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>setWalletNegative</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><name>wallet</name> <operator>=</operator> <operator>new</operator> <call><name>Wallet</name><argument_list>(<argument><expr><operator>-</operator><literal type="number">100</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>setWalletZero</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><name>wallet</name> <operator>=</operator> <operator>new</operator> <call><name>Wallet</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>putPositive</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <try>try <block>{<block_content>
+            <expr_stmt><expr><call><name><name>wallet</name><operator>.</operator><name>put</name></name><argument_list>(<argument><expr><literal type="number">5000</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block> <catch>catch <parameter_list>(<parameter><decl><type><name>InvalidMoneyAmountException</name></type> <name>e</name></decl></parameter>)</parameter_list> <block>{<block_content>
+            <expr_stmt><expr><call><name>fail</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block></catch></try>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">5100</literal></expr></argument>, <argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>putNegative</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>wallet</name><operator>.</operator><name>put</name></name><argument_list>(<argument><expr><operator>-</operator><literal type="number">5000</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>putZero</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>wallet</name><operator>.</operator><name>put</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>withdraw</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <try>try <block>{<block_content>
+            <expr_stmt><expr><call><name><name>wallet</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><literal type="number">70</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block> <catch>catch <parameter_list>(<parameter><decl><type><name>InvalidMoneyAmountException</name></type> <name>e</name></decl></parameter>)</parameter_list> <block>{<block_content>
+            <expr_stmt><expr><call><name>fail</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block></catch></try>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">30</literal></expr></argument>, <argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>withdrawTooMuch</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>wallet</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><literal type="number">101</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>withdrawZero</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>wallet</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>getAmount</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">100</literal></expr></argument>, <argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>getAmount0</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <try>try <block>{<block_content>
+            <expr_stmt><expr><call><name><name>wallet</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block> <catch>catch <parameter_list>(<parameter><decl><type><name>InvalidMoneyAmountException</name></type> <name>e</name></decl></parameter>)</parameter_list> <block>{<block_content>
+            <expr_stmt><expr><call><name>fail</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block></catch></try>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>, <argument><expr><call><name><name>wallet</name><operator>.</operator><name>getAmount</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+}</block></class>
+</unit>

@@ -1,0 +1,146 @@
+Category,Element
+Identifiers,model
+Identifiers,java . util . Objects
+Identifiers,java
+Identifiers,util
+Identifiers,Objects
+Identifiers,Bet
+Identifiers,int
+Identifiers,bet
+Identifiers,Bet
+Identifiers,int
+Identifiers,bet
+Identifiers,this . bet
+Identifiers,this
+Identifiers,bet
+Identifiers,bet
+Identifiers,int
+Identifiers,getAmount
+Identifiers,bet
+Identifiers,Override
+Identifiers,boolean
+Identifiers,equals
+Identifiers,Object
+Identifiers,o
+Identifiers,this
+Identifiers,o
+Identifiers,o
+Identifiers,getClass
+Identifiers,o . getClass
+Identifiers,o
+Identifiers,getClass
+Identifiers,Bet
+Identifiers,bet1
+Identifiers,Bet
+Identifiers,o
+Identifiers,bet
+Identifiers,bet1 . bet
+Identifiers,bet1
+Identifiers,bet
+Identifiers,Override
+Identifiers,int
+Identifiers,hashCode
+Identifiers,Objects . hash
+Identifiers,Objects
+Identifiers,hash
+Identifiers,bet
+Method Signatures,"public   Bet ( int   bet )   { 
+         this . bet   =   bet ; 
+     }"
+Method Signatures,"public   int   getAmount ()   { 
+         return  bet ; 
+     }"
+Method Signatures,"@ Override 
+     public   boolean   equals ( Object   o )   { 
+         if  ( this   ==   o )   return  true ; 
+         if  ( o   ==   null   ||   getClass ()   !=   o . getClass () )   return  false ; 
+         Bet   bet1   =  ( Bet )   o ; 
+         return  bet   ==   bet1 . bet ; 
+     }"
+Method Signatures,"@ Override 
+     public   int   hashCode ()   { 
+         return  Objects . hash ( bet ) ; 
+     }"
+Variable Names,model
+Variable Names,java . util . Objects
+Variable Names,java
+Variable Names,util
+Variable Names,Objects
+Variable Names,Bet
+Variable Names,int
+Variable Names,bet
+Variable Names,Bet
+Variable Names,int
+Variable Names,bet
+Variable Names,this . bet
+Variable Names,this
+Variable Names,bet
+Variable Names,bet
+Variable Names,int
+Variable Names,getAmount
+Variable Names,bet
+Variable Names,Override
+Variable Names,boolean
+Variable Names,equals
+Variable Names,Object
+Variable Names,o
+Variable Names,this
+Variable Names,o
+Variable Names,o
+Variable Names,getClass
+Variable Names,o . getClass
+Variable Names,o
+Variable Names,getClass
+Variable Names,Bet
+Variable Names,bet1
+Variable Names,Bet
+Variable Names,o
+Variable Names,bet
+Variable Names,bet1 . bet
+Variable Names,bet1
+Variable Names,bet
+Variable Names,Override
+Variable Names,int
+Variable Names,hashCode
+Variable Names,Objects . hash
+Variable Names,Objects
+Variable Names,hash
+Variable Names,bet
+Variable Types,private   final   int
+Variable Types,int
+Variable Types,public   int
+Variable Types,public   boolean
+Variable Types,Object
+Variable Types,Bet
+Variable Types,public   int
+Keywords,public
+Keywords,private
+Keywords,final
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,if  ( this   ==   o )   return  true ;
+Keywords,if  ( o   ==   null   ||   getClass ()   !=   o . getClass () )   return  false ;
+Keywords,return  bet ;
+Keywords,return  true ;
+Keywords,return  false ;
+Keywords,return  bet   ==   bet1 . bet ;
+Keywords,return  Objects . hash ( bet ) ;
+Arguments,int   bet
+Arguments,Object   o
+Arguments,bet
+Operators,.
+Operators,.
+Operators,.
+Operators,=
+Operators,==
+Operators,==
+Operators,||
+Operators,!=
+Operators,.
+Operators,(
+Operators,)
+Operators,==
+Operators,.
+Operators,.

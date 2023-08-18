@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" revision="1.0.0" language="Java" filename="Wallet.java"><package>package <name>model</name>;</package>
+
+<import>import <name><name>exception</name><operator>.</operator><name>InvalidMoneyAmountException</name></name>;</import>
+
+<class><specifier>public</specifier> class <name>Wallet</name> <block>{
+    <decl_stmt><decl><type><specifier>private</specifier> <name>int</name></type> <name>money</name></decl>;</decl_stmt>
+
+    <comment type="block" format="javadoc">/**
+     * @param money: integer
+     * @pre money &gt;= 0
+     */</comment>
+    <constructor><specifier>public</specifier> <name>Wallet</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>money</name></decl></parameter>)</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><name><name>this</name><operator>.</operator><name>money</name></name> <operator>=</operator> <call><name><name>Math</name><operator>.</operator><name>max</name></name><argument_list>(<argument><expr><name>money</name></expr></argument>, <argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></constructor>
+
+    <constructor><specifier>public</specifier> <name>Wallet</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><name><name>this</name><operator>.</operator><name>money</name></name> <operator>=</operator> <literal type="number">100</literal></expr>;</expr_stmt>
+    </block_content>}</block></constructor>
+
+    <comment type="block" format="javadoc">/**
+     * @param amount: int
+     * @pre amount &gt;= 0
+     */</comment>
+    <function><type><specifier>public</specifier> <name>void</name></type> <name>put</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>amount</name></decl></parameter>)</parameter_list> <throws>throws <argument><expr><name>InvalidMoneyAmountException</name></expr></argument></throws> <block>{<block_content>
+        <if_stmt><if>if <condition>(<expr><name>amount</name> <operator>&lt;=</operator> <literal type="number">0</literal></expr>)</condition> <block>{<block_content>
+            <throw>throw <expr><operator>new</operator> <call><name>InvalidMoneyAmountException</name><argument_list>()</argument_list></call></expr>;</throw>
+        </block_content>}</block></if></if_stmt>
+        <expr_stmt><expr><name><name>this</name><operator>.</operator><name>money</name></name> <operator>+=</operator> <name>amount</name></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <comment type="block" format="javadoc">/**
+     * Subtracts the amount from the wallet
+     *
+     * @param amount: integer
+     * @throws InvalidMoneyAmountException : if the money in the wallet is insufficient
+     * @pre amount &gt;= 0
+     */</comment>
+    <function><type><specifier>public</specifier> <name>void</name></type> <name>withdraw</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>amount</name></decl></parameter>)</parameter_list> <throws>throws <argument><expr><name>InvalidMoneyAmountException</name></expr></argument></throws> <block>{<block_content>
+        <if_stmt><if>if <condition>(<expr><name><name>this</name><operator>.</operator><name>money</name></name> <operator>&lt;</operator> <name>amount</name> <operator>||</operator> <name>amount</name> <operator>==</operator> <literal type="number">0</literal></expr>)</condition> <block>{<block_content>
+            <throw>throw <expr><operator>new</operator> <call><name>InvalidMoneyAmountException</name><argument_list>()</argument_list></call></expr>;</throw>
+        </block_content>}</block></if></if_stmt>
+        <expr_stmt><expr><name><name>this</name><operator>.</operator><name>money</name></name> <operator>-=</operator> <name>amount</name></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <comment type="block" format="javadoc">/**
+     * @return int: how much money in this wallet is
+     */</comment>
+    <function><type><specifier>public</specifier> <name>int</name></type> <name>getAmount</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <return>return <expr><name><name>this</name><operator>.</operator><name>money</name></name></expr>;</return>
+    </block_content>}</block></function>
+
+    <comment type="block" format="javadoc">/**
+     * Empties the Wallet, if the current amount is greater than zero
+     */</comment>
+    <function><type><specifier>public</specifier> <name>void</name></type> <name>withdrawAll</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <if_stmt><if>if <condition>(<expr><name><name>this</name><operator>.</operator><name>money</name></name> <operator>&gt;=</operator> <literal type="number">0</literal></expr>)</condition> <block>{<block_content>
+            <expr_stmt><expr><name><name>this</name><operator>.</operator><name>money</name></name> <operator>=</operator> <literal type="number">0</literal></expr>;</expr_stmt>
+        </block_content>}</block></if></if_stmt>
+    </block_content>}</block></function>
+}</block></class>
+</unit>

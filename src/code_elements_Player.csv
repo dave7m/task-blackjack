@@ -1,0 +1,340 @@
+Category,Element
+Identifiers,model
+Identifiers,exception . InvalidMoneyAmountException
+Identifiers,exception
+Identifiers,InvalidMoneyAmountException
+Identifiers,Player
+Identifiers,Person
+Identifiers,Wallet
+Identifiers,wallet
+Identifiers,Bet
+Identifiers,bet
+Identifiers,int
+Identifiers,playerNumber
+Identifiers,Player
+Identifiers,wallet
+Identifiers,Wallet
+Identifiers,int
+Identifiers,balance
+Identifiers,wallet . getAmount
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,void
+Identifiers,withdraw
+Identifiers,int
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,wallet . withdraw
+Identifiers,wallet
+Identifiers,withdraw
+Identifiers,amount
+Identifiers,void
+Identifiers,receiveMoney
+Identifiers,int
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,wallet . put
+Identifiers,wallet
+Identifiers,put
+Identifiers,amount
+Identifiers,String
+Identifiers,getAllHandValues
+Identifiers,int []
+Identifiers,int
+Identifiers,allValues
+Identifiers,hand . getAllValues
+Identifiers,hand
+Identifiers,getAllValues
+Identifiers,StringBuilder
+Identifiers,stringBuilder
+Identifiers,StringBuilder
+Identifiers,stringBuilder . append
+Identifiers,stringBuilder
+Identifiers,append
+Identifiers,stringBuilder . append
+Identifiers,stringBuilder
+Identifiers,append
+Identifiers,allValues [ 0 ]
+Identifiers,allValues
+Identifiers,allValues . length
+Identifiers,allValues
+Identifiers,length
+Identifiers,stringBuilder . append
+Identifiers,stringBuilder
+Identifiers,append
+Identifiers,stringBuilder . append
+Identifiers,stringBuilder
+Identifiers,append
+Identifiers,allValues [ 1 ]
+Identifiers,allValues
+Identifiers,stringBuilder . append
+Identifiers,stringBuilder
+Identifiers,append
+Identifiers,repeat
+Identifiers,stringBuilder . length
+Identifiers,stringBuilder
+Identifiers,length
+Identifiers,stringBuilder
+Identifiers,Bet
+Identifiers,getBet
+Identifiers,bet
+Identifiers,void
+Identifiers,setBet
+Identifiers,Bet
+Identifiers,bet
+Identifiers,this . bet
+Identifiers,this
+Identifiers,bet
+Identifiers,bet
+Identifiers,void
+Identifiers,setBetAllIn
+Identifiers,this . bet
+Identifiers,this
+Identifiers,bet
+Identifiers,Bet
+Identifiers,this . wallet . getAmount
+Identifiers,this
+Identifiers,wallet
+Identifiers,getAmount
+Identifiers,int
+Identifiers,getPlayerNumber
+Identifiers,playerNumber
+Identifiers,void
+Identifiers,setPlayerNumber
+Identifiers,int
+Identifiers,newPlayerNumber
+Identifiers,this . playerNumber
+Identifiers,this
+Identifiers,playerNumber
+Identifiers,newPlayerNumber
+Method Signatures,"public   Player () { 
+         wallet   =   new   Wallet ( 100 ) ; 
+     }"
+Method Signatures,"public   int   balance () { 
+         return  wallet . getAmount () ; 
+     }"
+Method Signatures,"public   void   withdraw ( int   amount )   throws  InvalidMoneyAmountException   { 
+         wallet . withdraw ( amount ) ; 
+     }"
+Method Signatures,"public   void   receiveMoney ( int   amount )   throws  InvalidMoneyAmountException   { 
+         wallet . put ( amount ) ; 
+     }"
+Method Signatures,"public   String   getAllHandValues ()   { 
+         // The returned array's length is either 1 value or 2 values. Does not count an ace as 11 if it busts the hand, 
+         // only as 1. hand.getAllValues() returns an array of possible hand values. E.g. having an EIGHT and an ACE 
+         // results in [9, 19] (8+1 and 8+11), having an EIGHT and a NINE results in [17] (8+9). 
+         int []   allValues   =  hand . getAllValues () ; 
+         StringBuilder   stringBuilder   =  new   StringBuilder () ; 
+
+         stringBuilder . append ( ""("" ) ; 
+         stringBuilder . append ( allValues [ 0 ] ) ; 
+         if ( allValues . length   ==   2 ) { 
+             stringBuilder . append ( "", "" ) ; 
+             stringBuilder . append ( allValues [ 1 ] ) ; 
+         } 
+         stringBuilder . append ( "")"" ) ; 
+         return  "" "" . repeat ( 8   -   stringBuilder . length () )   +   stringBuilder ; 
+     }"
+Method Signatures,public   Bet   getBet () { return  bet ; }
+Method Signatures,public   void   setBet ( Bet   bet ) { this . bet   =   bet ; }
+Method Signatures,"public   void   setBetAllIn ()   { 
+         this . bet   =   new   Bet ( this . wallet . getAmount () ) ; 
+     }"
+Method Signatures,public   int   getPlayerNumber () { return  playerNumber ; }
+Method Signatures,public   void   setPlayerNumber ( int   newPlayerNumber ) { this . playerNumber   =   newPlayerNumber ; }
+Variable Names,model
+Variable Names,exception . InvalidMoneyAmountException
+Variable Names,exception
+Variable Names,InvalidMoneyAmountException
+Variable Names,Player
+Variable Names,Person
+Variable Names,Wallet
+Variable Names,wallet
+Variable Names,Bet
+Variable Names,bet
+Variable Names,int
+Variable Names,playerNumber
+Variable Names,Player
+Variable Names,wallet
+Variable Names,Wallet
+Variable Names,int
+Variable Names,balance
+Variable Names,wallet . getAmount
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,void
+Variable Names,withdraw
+Variable Names,int
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,wallet . withdraw
+Variable Names,wallet
+Variable Names,withdraw
+Variable Names,amount
+Variable Names,void
+Variable Names,receiveMoney
+Variable Names,int
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,wallet . put
+Variable Names,wallet
+Variable Names,put
+Variable Names,amount
+Variable Names,String
+Variable Names,getAllHandValues
+Variable Names,int []
+Variable Names,int
+Variable Names,allValues
+Variable Names,hand . getAllValues
+Variable Names,hand
+Variable Names,getAllValues
+Variable Names,StringBuilder
+Variable Names,stringBuilder
+Variable Names,StringBuilder
+Variable Names,stringBuilder . append
+Variable Names,stringBuilder
+Variable Names,append
+Variable Names,stringBuilder . append
+Variable Names,stringBuilder
+Variable Names,append
+Variable Names,allValues [ 0 ]
+Variable Names,allValues
+Variable Names,allValues . length
+Variable Names,allValues
+Variable Names,length
+Variable Names,stringBuilder . append
+Variable Names,stringBuilder
+Variable Names,append
+Variable Names,stringBuilder . append
+Variable Names,stringBuilder
+Variable Names,append
+Variable Names,allValues [ 1 ]
+Variable Names,allValues
+Variable Names,stringBuilder . append
+Variable Names,stringBuilder
+Variable Names,append
+Variable Names,repeat
+Variable Names,stringBuilder . length
+Variable Names,stringBuilder
+Variable Names,length
+Variable Names,stringBuilder
+Variable Names,Bet
+Variable Names,getBet
+Variable Names,bet
+Variable Names,void
+Variable Names,setBet
+Variable Names,Bet
+Variable Names,bet
+Variable Names,this . bet
+Variable Names,this
+Variable Names,bet
+Variable Names,bet
+Variable Names,void
+Variable Names,setBetAllIn
+Variable Names,this . bet
+Variable Names,this
+Variable Names,bet
+Variable Names,Bet
+Variable Names,this . wallet . getAmount
+Variable Names,this
+Variable Names,wallet
+Variable Names,getAmount
+Variable Names,int
+Variable Names,getPlayerNumber
+Variable Names,playerNumber
+Variable Names,void
+Variable Names,setPlayerNumber
+Variable Names,int
+Variable Names,newPlayerNumber
+Variable Names,this . playerNumber
+Variable Names,this
+Variable Names,playerNumber
+Variable Names,newPlayerNumber
+Variable Types,private   final   Wallet
+Variable Types,private   Bet
+Variable Types,private   int
+Variable Types,public   int
+Variable Types,public   void
+Variable Types,int
+Variable Types,public   void
+Variable Types,int
+Variable Types,public   String
+Variable Types,int []
+Variable Types,StringBuilder
+Variable Types,public   Bet
+Variable Types,public   void
+Variable Types,Bet
+Variable Types,public   void
+Variable Types,public   int
+Variable Types,public   void
+Variable Types,int
+Keywords,public
+Keywords,private
+Keywords,final
+Keywords,private
+Keywords,private
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,throws  InvalidMoneyAmountException
+Keywords,throws  InvalidMoneyAmountException
+Keywords,"if ( allValues . length   ==   2 ) { 
+             stringBuilder . append ( "", "" ) ; 
+             stringBuilder . append ( allValues [ 1 ] ) ; 
+         }"
+Keywords,return  wallet . getAmount () ;
+Keywords,"return  "" "" . repeat ( 8   -   stringBuilder . length () )   +   stringBuilder ;"
+Keywords,return  bet ;
+Keywords,return  playerNumber ;
+Keywords,extends  Person
+Arguments,int   amount
+Arguments,int   amount
+Arguments,Bet   bet
+Arguments,int   newPlayerNumber
+Arguments,100
+Arguments,InvalidMoneyAmountException
+Arguments,amount
+Arguments,InvalidMoneyAmountException
+Arguments,amount
+Arguments,"""("""
+Arguments,allValues [ 0 ]
+Arguments,""", """
+Arguments,allValues [ 1 ]
+Arguments,""")"""
+Arguments,8   -   stringBuilder . length ()
+Arguments,this . wallet . getAmount ()
+Operators,.
+Operators,=
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,==
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,-
+Operators,.
+Operators,+
+Operators,.
+Operators,=
+Operators,.
+Operators,=
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,=

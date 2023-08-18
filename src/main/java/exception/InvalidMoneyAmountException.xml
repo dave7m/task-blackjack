@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" revision="1.0.0" language="Java" filename="InvalidMoneyAmountException.java"><package>package <name>exception</name>;</package>
+
+<class><specifier>public</specifier> class <name>InvalidMoneyAmountException</name> <super_list><extends>extends <super><name>Exception</name></super></extends></super_list> <block>{
+}</block></class>
+</unit>

@@ -1,0 +1,206 @@
+Category,Element
+Identifiers,model
+Identifiers,exception . InvalidMoneyAmountException
+Identifiers,exception
+Identifiers,InvalidMoneyAmountException
+Identifiers,Wallet
+Identifiers,int
+Identifiers,money
+Identifiers,Wallet
+Identifiers,int
+Identifiers,money
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Identifiers,Math . max
+Identifiers,Math
+Identifiers,max
+Identifiers,money
+Identifiers,Wallet
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Identifiers,void
+Identifiers,put
+Identifiers,int
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Identifiers,amount
+Identifiers,void
+Identifiers,withdraw
+Identifiers,int
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Identifiers,amount
+Identifiers,amount
+Identifiers,InvalidMoneyAmountException
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Identifiers,amount
+Identifiers,int
+Identifiers,getAmount
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Identifiers,void
+Identifiers,withdrawAll
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Identifiers,this . money
+Identifiers,this
+Identifiers,money
+Method Signatures,"public   Wallet ( int   money )   { 
+         this . money   =   Math . max ( money ,  0 ) ; 
+     }"
+Method Signatures,"public   Wallet ()   { 
+         this . money   =   100 ; 
+     }"
+Method Signatures,"public   void   put ( int   amount )   throws  InvalidMoneyAmountException   { 
+         if  ( amount   <=   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         } 
+         this . money   +=   amount ; 
+     }"
+Method Signatures,"public   void   withdraw ( int   amount )   throws  InvalidMoneyAmountException   { 
+         if  ( this . money   <   amount   ||   amount   ==   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         } 
+         this . money   -=   amount ; 
+     }"
+Method Signatures,"public   int   getAmount ()   { 
+         return  this . money ; 
+     }"
+Method Signatures,"public   void   withdrawAll ()   { 
+         if  ( this . money   >=   0 )   { 
+             this . money   =   0 ; 
+         } 
+     }"
+Variable Names,model
+Variable Names,exception . InvalidMoneyAmountException
+Variable Names,exception
+Variable Names,InvalidMoneyAmountException
+Variable Names,Wallet
+Variable Names,int
+Variable Names,money
+Variable Names,Wallet
+Variable Names,int
+Variable Names,money
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Names,Math . max
+Variable Names,Math
+Variable Names,max
+Variable Names,money
+Variable Names,Wallet
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Names,void
+Variable Names,put
+Variable Names,int
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Names,amount
+Variable Names,void
+Variable Names,withdraw
+Variable Names,int
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Names,amount
+Variable Names,amount
+Variable Names,InvalidMoneyAmountException
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Names,amount
+Variable Names,int
+Variable Names,getAmount
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Names,void
+Variable Names,withdrawAll
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Names,this . money
+Variable Names,this
+Variable Names,money
+Variable Types,private   int
+Variable Types,int
+Variable Types,public   void
+Variable Types,int
+Variable Types,public   void
+Variable Types,int
+Variable Types,public   int
+Variable Types,public   void
+Keywords,public
+Keywords,private
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,public
+Keywords,throws  InvalidMoneyAmountException
+Keywords,throws  InvalidMoneyAmountException
+Keywords,"if  ( amount   <=   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         }"
+Keywords,"if  ( this . money   <   amount   ||   amount   ==   0 )   { 
+             throw  new   InvalidMoneyAmountException () ; 
+         }"
+Keywords,"if  ( this . money   >=   0 )   { 
+             this . money   =   0 ; 
+         }"
+Keywords,return  this . money ;
+Keywords,throw  new   InvalidMoneyAmountException () ;
+Keywords,throw  new   InvalidMoneyAmountException () ;
+Arguments,int   money
+Arguments,int   amount
+Arguments,int   amount
+Arguments,money
+Arguments,0
+Arguments,InvalidMoneyAmountException
+Arguments,InvalidMoneyAmountException
+Operators,.
+Operators,.
+Operators,=
+Operators,.
+Operators,.
+Operators,=
+Operators,<=
+Operators,new
+Operators,.
+Operators,+=
+Operators,.
+Operators,<
+Operators,||
+Operators,==
+Operators,new
+Operators,.
+Operators,-=
+Operators,.
+Operators,.
+Operators,>=
+Operators,.
+Operators,=

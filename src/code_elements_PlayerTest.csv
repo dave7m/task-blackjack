@@ -1,0 +1,860 @@
+Category,Element
+Identifiers,model
+Identifiers,exception . InvalidMoneyAmountException
+Identifiers,exception
+Identifiers,InvalidMoneyAmountException
+Identifiers,org . junit . jupiter . api . AfterEach
+Identifiers,org
+Identifiers,junit
+Identifiers,jupiter
+Identifiers,api
+Identifiers,AfterEach
+Identifiers,org . junit . jupiter . api . BeforeEach
+Identifiers,org
+Identifiers,junit
+Identifiers,jupiter
+Identifiers,api
+Identifiers,BeforeEach
+Identifiers,org . junit . jupiter . api . Test
+Identifiers,org
+Identifiers,junit
+Identifiers,jupiter
+Identifiers,api
+Identifiers,Test
+Identifiers,java . util . List
+Identifiers,java
+Identifiers,util
+Identifiers,List
+Identifiers,org . junit . jupiter . api . Assertions . *
+Identifiers,org
+Identifiers,junit
+Identifiers,jupiter
+Identifiers,api
+Identifiers,Assertions
+Identifiers,*
+Identifiers,PlayerTest
+Identifiers,Player
+Identifiers,aPlayer
+Identifiers,BeforeEach
+Identifiers,void
+Identifiers,setUp
+Identifiers,aPlayer
+Identifiers,Player
+Identifiers,aPlayer . addCardToHand
+Identifiers,aPlayer
+Identifiers,addCardToHand
+Identifiers,Card
+Identifiers,Rank . KING
+Identifiers,Rank
+Identifiers,KING
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,AfterEach
+Identifiers,void
+Identifiers,tearDown
+Identifiers,Test
+Identifiers,void
+Identifiers,addCardToHand
+Identifiers,aPlayer . addCardToHand
+Identifiers,aPlayer
+Identifiers,addCardToHand
+Identifiers,Card
+Identifiers,Rank . TWO
+Identifiers,Rank
+Identifiers,TWO
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,aPlayer . addCardToHand
+Identifiers,aPlayer
+Identifiers,addCardToHand
+Identifiers,Card
+Identifiers,Rank . QUEEN
+Identifiers,Rank
+Identifiers,QUEEN
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,assertEquals
+Identifiers,aPlayer . getHandValue
+Identifiers,aPlayer
+Identifiers,getHandValue
+Identifiers,List < Card >
+Identifiers,List
+Identifiers,Card
+Identifiers,cardList
+Identifiers,aPlayer . hand . getCards
+Identifiers,aPlayer
+Identifiers,hand
+Identifiers,getCards
+Identifiers,assertTrue
+Identifiers,cardList . get
+Identifiers,cardList
+Identifiers,get
+Identifiers,equals
+Identifiers,Card
+Identifiers,Rank . KING
+Identifiers,Rank
+Identifiers,KING
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,assertTrue
+Identifiers,cardList . get
+Identifiers,cardList
+Identifiers,get
+Identifiers,equals
+Identifiers,Card
+Identifiers,Rank . TWO
+Identifiers,Rank
+Identifiers,TWO
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,assertTrue
+Identifiers,cardList . get
+Identifiers,cardList
+Identifiers,get
+Identifiers,equals
+Identifiers,Card
+Identifiers,Rank . QUEEN
+Identifiers,Rank
+Identifiers,QUEEN
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,Test
+Identifiers,void
+Identifiers,balance
+Identifiers,assertEquals
+Identifiers,aPlayer . balance
+Identifiers,aPlayer
+Identifiers,balance
+Identifiers,Test
+Identifiers,void
+Identifiers,withdrawValidAmount
+Identifiers,assertDoesNotThrow
+Identifiers,aPlayer . withdraw
+Identifiers,aPlayer
+Identifiers,withdraw
+Identifiers,aPlayer . withdraw
+Identifiers,aPlayer
+Identifiers,withdraw
+Identifiers,assertEquals
+Identifiers,aPlayer . balance
+Identifiers,aPlayer
+Identifiers,balance
+Identifiers,InvalidMoneyAmountException
+Identifiers,e
+Identifiers,fail
+Identifiers,Test
+Identifiers,void
+Identifiers,withdrawTooMuch
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,aPlayer . withdraw
+Identifiers,aPlayer
+Identifiers,withdraw
+Identifiers,Test
+Identifiers,void
+Identifiers,withdraw0
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,aPlayer . withdraw
+Identifiers,aPlayer
+Identifiers,withdraw
+Identifiers,Test
+Identifiers,void
+Identifiers,receiveMoney
+Identifiers,aPlayer . receiveMoney
+Identifiers,aPlayer
+Identifiers,receiveMoney
+Identifiers,InvalidMoneyAmountException
+Identifiers,e
+Identifiers,fail
+Identifiers,assertEquals
+Identifiers,aPlayer . balance
+Identifiers,aPlayer
+Identifiers,balance
+Identifiers,Test
+Identifiers,void
+Identifiers,receiveMoney0
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,aPlayer . receiveMoney
+Identifiers,aPlayer
+Identifiers,receiveMoney
+Identifiers,Test
+Identifiers,void
+Identifiers,receiveMoneyNegative
+Identifiers,assertThrows
+Identifiers,InvalidMoneyAmountException . class
+Identifiers,InvalidMoneyAmountException
+Identifiers,class
+Identifiers,aPlayer . receiveMoney
+Identifiers,aPlayer
+Identifiers,receiveMoney
+Identifiers,Test
+Identifiers,void
+Identifiers,getAllHandValues
+Identifiers,assertEquals
+Identifiers,aPlayer . getAllHandValues
+Identifiers,aPlayer
+Identifiers,getAllHandValues
+Identifiers,aPlayer . addCardToHand
+Identifiers,aPlayer
+Identifiers,addCardToHand
+Identifiers,Card
+Identifiers,Rank . TWO
+Identifiers,Rank
+Identifiers,TWO
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,assertEquals
+Identifiers,aPlayer . getAllHandValues
+Identifiers,aPlayer
+Identifiers,getAllHandValues
+Identifiers,aPlayer . addCardToHand
+Identifiers,aPlayer
+Identifiers,addCardToHand
+Identifiers,Card
+Identifiers,Rank . ACE
+Identifiers,Rank
+Identifiers,ACE
+Identifiers,Suit . DIAMOND
+Identifiers,Suit
+Identifiers,DIAMOND
+Identifiers,assertEquals
+Identifiers,aPlayer . getAllHandValues
+Identifiers,aPlayer
+Identifiers,getAllHandValues
+Identifiers,Player
+Identifiers,bPlayer
+Identifiers,Player
+Identifiers,bPlayer . addCardToHand
+Identifiers,bPlayer
+Identifiers,addCardToHand
+Identifiers,Card
+Identifiers,Rank . ACE
+Identifiers,Rank
+Identifiers,ACE
+Identifiers,Suit . CLUBS
+Identifiers,Suit
+Identifiers,CLUBS
+Identifiers,assertEquals
+Identifiers,bPlayer . getAllHandValues
+Identifiers,bPlayer
+Identifiers,getAllHandValues
+Identifiers,Test
+Identifiers,void
+Identifiers,testPlayerNo
+Identifiers,aPlayer . setPlayerNumber
+Identifiers,aPlayer
+Identifiers,setPlayerNumber
+Identifiers,assertEquals
+Identifiers,aPlayer . getPlayerNumber
+Identifiers,aPlayer
+Identifiers,getPlayerNumber
+Identifiers,Test
+Identifiers,void
+Identifiers,testBet
+Identifiers,aPlayer . setBet
+Identifiers,aPlayer
+Identifiers,setBet
+Identifiers,Bet
+Identifiers,assertEquals
+Identifiers,aPlayer . getBet
+Identifiers,aPlayer
+Identifiers,getBet
+Identifiers,getAmount
+Identifiers,Test
+Identifiers,void
+Identifiers,testBetEquality
+Identifiers,assertEquals
+Identifiers,Bet
+Identifiers,Bet
+Identifiers,Test
+Identifiers,void
+Identifiers,testBetInequality
+Identifiers,assertNotEquals
+Identifiers,Bet
+Identifiers,Bet
+Method Signatures,"@ BeforeEach 
+     void   setUp ()   { 
+         aPlayer   =   new   Player () ; 
+         aPlayer . addCardToHand ( new   Card ( Rank . KING ,  Suit . DIAMOND ) ) ; 
+     }"
+Method Signatures,"@ AfterEach 
+     void   tearDown ()   { 
+     }"
+Method Signatures,"@ Test 
+     void   addCardToHand ()   { 
+         aPlayer . addCardToHand ( new   Card ( Rank . TWO ,  Suit . DIAMOND ) ) ; 
+         aPlayer . addCardToHand ( new   Card ( Rank . QUEEN ,  Suit . DIAMOND ) ) ; 
+         assertEquals ( 22 ,  aPlayer . getHandValue () ) ; 
+         List < Card >   cardList   =  aPlayer . hand . getCards () ; 
+         assertTrue ( cardList . get ( 0 ) . equals ( new   Card ( Rank . KING ,  Suit . DIAMOND ) ) ) ; 
+         assertTrue ( cardList . get ( 1 ) . equals ( new   Card ( Rank . TWO ,  Suit . DIAMOND ) ) ) ; 
+         assertTrue ( cardList . get ( 2 ) . equals ( new   Card ( Rank . QUEEN ,  Suit . DIAMOND ) ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   balance ()   { 
+         assertEquals ( 100 ,  aPlayer . balance () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   withdrawValidAmount ()   { 
+         assertDoesNotThrow ( ()  ->   aPlayer . withdraw ( 40 ) ) ; 
+         try  { 
+             aPlayer . withdraw ( 40 ) ; 
+             assertEquals ( 20 ,  aPlayer . balance () ) ; 
+         }   catch  ( InvalidMoneyAmountException   e )   { 
+             fail () ; 
+         } 
+     }"
+Method Signatures,"@ Test 
+     void   withdrawTooMuch ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   aPlayer . withdraw ( 101 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   withdraw0 ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   aPlayer . withdraw ( 0 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   receiveMoney ()   { 
+         try  { 
+             aPlayer . receiveMoney ( 50 ) ; 
+         }   catch  ( InvalidMoneyAmountException   e )   { 
+             fail () ; 
+         } 
+         assertEquals ( 150 ,  aPlayer . balance () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   receiveMoney0 ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   aPlayer . receiveMoney ( 0 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   receiveMoneyNegative ()   { 
+         assertThrows ( InvalidMoneyAmountException . class ,  ()  ->   aPlayer . receiveMoney ( - 50 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   getAllHandValues ()   { 
+         assertEquals ( ""    (10)"" ,  aPlayer . getAllHandValues () ) ; 
+         aPlayer . addCardToHand ( new   Card ( Rank . TWO ,  Suit . DIAMOND ) ) ; 
+         assertEquals ( ""    (12)"" ,  aPlayer . getAllHandValues () ) ; 
+         aPlayer . addCardToHand ( new   Card ( Rank . ACE ,  Suit . DIAMOND ) ) ; 
+         assertEquals ( ""    (13)"" ,  aPlayer . getAllHandValues () ) ; 
+         Player   bPlayer   =  new   Player () ; 
+         bPlayer . addCardToHand ( new   Card ( Rank . ACE ,  Suit . CLUBS ) ) ; 
+         assertEquals ( "" (1, 11)"" ,  bPlayer . getAllHandValues () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   testPlayerNo ()   { 
+         aPlayer . setPlayerNumber ( 3 ) ; 
+         assertEquals ( 3 ,  aPlayer . getPlayerNumber () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   testBet ()   { 
+         aPlayer . setBet ( new   Bet ( 100 ) ) ; 
+         assertEquals ( 100 ,  aPlayer . getBet () . getAmount () ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   testBetEquality ()   { 
+         assertEquals ( new   Bet ( 200 ) ,  new   Bet ( 200 ) ) ; 
+     }"
+Method Signatures,"@ Test 
+     void   testBetInequality ()   { 
+         assertNotEquals ( new   Bet ( 100 ) ,  new   Bet ( 200 ) ) ; 
+     }"
+Variable Names,model
+Variable Names,exception . InvalidMoneyAmountException
+Variable Names,exception
+Variable Names,InvalidMoneyAmountException
+Variable Names,org . junit . jupiter . api . AfterEach
+Variable Names,org
+Variable Names,junit
+Variable Names,jupiter
+Variable Names,api
+Variable Names,AfterEach
+Variable Names,org . junit . jupiter . api . BeforeEach
+Variable Names,org
+Variable Names,junit
+Variable Names,jupiter
+Variable Names,api
+Variable Names,BeforeEach
+Variable Names,org . junit . jupiter . api . Test
+Variable Names,org
+Variable Names,junit
+Variable Names,jupiter
+Variable Names,api
+Variable Names,Test
+Variable Names,java . util . List
+Variable Names,java
+Variable Names,util
+Variable Names,List
+Variable Names,org . junit . jupiter . api . Assertions . *
+Variable Names,org
+Variable Names,junit
+Variable Names,jupiter
+Variable Names,api
+Variable Names,Assertions
+Variable Names,*
+Variable Names,PlayerTest
+Variable Names,Player
+Variable Names,aPlayer
+Variable Names,BeforeEach
+Variable Names,void
+Variable Names,setUp
+Variable Names,aPlayer
+Variable Names,Player
+Variable Names,aPlayer . addCardToHand
+Variable Names,aPlayer
+Variable Names,addCardToHand
+Variable Names,Card
+Variable Names,Rank . KING
+Variable Names,Rank
+Variable Names,KING
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,AfterEach
+Variable Names,void
+Variable Names,tearDown
+Variable Names,Test
+Variable Names,void
+Variable Names,addCardToHand
+Variable Names,aPlayer . addCardToHand
+Variable Names,aPlayer
+Variable Names,addCardToHand
+Variable Names,Card
+Variable Names,Rank . TWO
+Variable Names,Rank
+Variable Names,TWO
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,aPlayer . addCardToHand
+Variable Names,aPlayer
+Variable Names,addCardToHand
+Variable Names,Card
+Variable Names,Rank . QUEEN
+Variable Names,Rank
+Variable Names,QUEEN
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,assertEquals
+Variable Names,aPlayer . getHandValue
+Variable Names,aPlayer
+Variable Names,getHandValue
+Variable Names,List < Card >
+Variable Names,List
+Variable Names,Card
+Variable Names,cardList
+Variable Names,aPlayer . hand . getCards
+Variable Names,aPlayer
+Variable Names,hand
+Variable Names,getCards
+Variable Names,assertTrue
+Variable Names,cardList . get
+Variable Names,cardList
+Variable Names,get
+Variable Names,equals
+Variable Names,Card
+Variable Names,Rank . KING
+Variable Names,Rank
+Variable Names,KING
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,assertTrue
+Variable Names,cardList . get
+Variable Names,cardList
+Variable Names,get
+Variable Names,equals
+Variable Names,Card
+Variable Names,Rank . TWO
+Variable Names,Rank
+Variable Names,TWO
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,assertTrue
+Variable Names,cardList . get
+Variable Names,cardList
+Variable Names,get
+Variable Names,equals
+Variable Names,Card
+Variable Names,Rank . QUEEN
+Variable Names,Rank
+Variable Names,QUEEN
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,Test
+Variable Names,void
+Variable Names,balance
+Variable Names,assertEquals
+Variable Names,aPlayer . balance
+Variable Names,aPlayer
+Variable Names,balance
+Variable Names,Test
+Variable Names,void
+Variable Names,withdrawValidAmount
+Variable Names,assertDoesNotThrow
+Variable Names,aPlayer . withdraw
+Variable Names,aPlayer
+Variable Names,withdraw
+Variable Names,aPlayer . withdraw
+Variable Names,aPlayer
+Variable Names,withdraw
+Variable Names,assertEquals
+Variable Names,aPlayer . balance
+Variable Names,aPlayer
+Variable Names,balance
+Variable Names,InvalidMoneyAmountException
+Variable Names,e
+Variable Names,fail
+Variable Names,Test
+Variable Names,void
+Variable Names,withdrawTooMuch
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,aPlayer . withdraw
+Variable Names,aPlayer
+Variable Names,withdraw
+Variable Names,Test
+Variable Names,void
+Variable Names,withdraw0
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,aPlayer . withdraw
+Variable Names,aPlayer
+Variable Names,withdraw
+Variable Names,Test
+Variable Names,void
+Variable Names,receiveMoney
+Variable Names,aPlayer . receiveMoney
+Variable Names,aPlayer
+Variable Names,receiveMoney
+Variable Names,InvalidMoneyAmountException
+Variable Names,e
+Variable Names,fail
+Variable Names,assertEquals
+Variable Names,aPlayer . balance
+Variable Names,aPlayer
+Variable Names,balance
+Variable Names,Test
+Variable Names,void
+Variable Names,receiveMoney0
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,aPlayer . receiveMoney
+Variable Names,aPlayer
+Variable Names,receiveMoney
+Variable Names,Test
+Variable Names,void
+Variable Names,receiveMoneyNegative
+Variable Names,assertThrows
+Variable Names,InvalidMoneyAmountException . class
+Variable Names,InvalidMoneyAmountException
+Variable Names,class
+Variable Names,aPlayer . receiveMoney
+Variable Names,aPlayer
+Variable Names,receiveMoney
+Variable Names,Test
+Variable Names,void
+Variable Names,getAllHandValues
+Variable Names,assertEquals
+Variable Names,aPlayer . getAllHandValues
+Variable Names,aPlayer
+Variable Names,getAllHandValues
+Variable Names,aPlayer . addCardToHand
+Variable Names,aPlayer
+Variable Names,addCardToHand
+Variable Names,Card
+Variable Names,Rank . TWO
+Variable Names,Rank
+Variable Names,TWO
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,assertEquals
+Variable Names,aPlayer . getAllHandValues
+Variable Names,aPlayer
+Variable Names,getAllHandValues
+Variable Names,aPlayer . addCardToHand
+Variable Names,aPlayer
+Variable Names,addCardToHand
+Variable Names,Card
+Variable Names,Rank . ACE
+Variable Names,Rank
+Variable Names,ACE
+Variable Names,Suit . DIAMOND
+Variable Names,Suit
+Variable Names,DIAMOND
+Variable Names,assertEquals
+Variable Names,aPlayer . getAllHandValues
+Variable Names,aPlayer
+Variable Names,getAllHandValues
+Variable Names,Player
+Variable Names,bPlayer
+Variable Names,Player
+Variable Names,bPlayer . addCardToHand
+Variable Names,bPlayer
+Variable Names,addCardToHand
+Variable Names,Card
+Variable Names,Rank . ACE
+Variable Names,Rank
+Variable Names,ACE
+Variable Names,Suit . CLUBS
+Variable Names,Suit
+Variable Names,CLUBS
+Variable Names,assertEquals
+Variable Names,bPlayer . getAllHandValues
+Variable Names,bPlayer
+Variable Names,getAllHandValues
+Variable Names,Test
+Variable Names,void
+Variable Names,testPlayerNo
+Variable Names,aPlayer . setPlayerNumber
+Variable Names,aPlayer
+Variable Names,setPlayerNumber
+Variable Names,assertEquals
+Variable Names,aPlayer . getPlayerNumber
+Variable Names,aPlayer
+Variable Names,getPlayerNumber
+Variable Names,Test
+Variable Names,void
+Variable Names,testBet
+Variable Names,aPlayer . setBet
+Variable Names,aPlayer
+Variable Names,setBet
+Variable Names,Bet
+Variable Names,assertEquals
+Variable Names,aPlayer . getBet
+Variable Names,aPlayer
+Variable Names,getBet
+Variable Names,getAmount
+Variable Names,Test
+Variable Names,void
+Variable Names,testBetEquality
+Variable Names,assertEquals
+Variable Names,Bet
+Variable Names,Bet
+Variable Names,Test
+Variable Names,void
+Variable Names,testBetInequality
+Variable Names,assertNotEquals
+Variable Names,Bet
+Variable Names,Bet
+Variable Types,Player
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,List < Card >
+Variable Types,void
+Variable Types,void
+Variable Types,InvalidMoneyAmountException
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,InvalidMoneyAmountException
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,Player
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Variable Types,void
+Arguments,InvalidMoneyAmountException   e
+Arguments,InvalidMoneyAmountException   e
+Arguments,"new   Card ( Rank . KING ,  Suit . DIAMOND )"
+Arguments,Rank . KING
+Arguments,Suit . DIAMOND
+Arguments,"new   Card ( Rank . TWO ,  Suit . DIAMOND )"
+Arguments,Rank . TWO
+Arguments,Suit . DIAMOND
+Arguments,"new   Card ( Rank . QUEEN ,  Suit . DIAMOND )"
+Arguments,Rank . QUEEN
+Arguments,Suit . DIAMOND
+Arguments,22
+Arguments,aPlayer . getHandValue ()
+Arguments,Card
+Arguments,"cardList . get ( 0 ) . equals ( new   Card ( Rank . KING ,  Suit . DIAMOND ) )"
+Arguments,0
+Arguments,"new   Card ( Rank . KING ,  Suit . DIAMOND )"
+Arguments,Rank . KING
+Arguments,Suit . DIAMOND
+Arguments,"cardList . get ( 1 ) . equals ( new   Card ( Rank . TWO ,  Suit . DIAMOND ) )"
+Arguments,1
+Arguments,"new   Card ( Rank . TWO ,  Suit . DIAMOND )"
+Arguments,Rank . TWO
+Arguments,Suit . DIAMOND
+Arguments,"cardList . get ( 2 ) . equals ( new   Card ( Rank . QUEEN ,  Suit . DIAMOND ) )"
+Arguments,2
+Arguments,"new   Card ( Rank . QUEEN ,  Suit . DIAMOND )"
+Arguments,Rank . QUEEN
+Arguments,Suit . DIAMOND
+Arguments,100
+Arguments,aPlayer . balance ()
+Arguments,()  ->   aPlayer . withdraw ( 40 )
+Arguments,40
+Arguments,40
+Arguments,20
+Arguments,aPlayer . balance ()
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   aPlayer . withdraw ( 101 )
+Arguments,101
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   aPlayer . withdraw ( 0 )
+Arguments,0
+Arguments,50
+Arguments,150
+Arguments,aPlayer . balance ()
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   aPlayer . receiveMoney ( 0 )
+Arguments,0
+Arguments,InvalidMoneyAmountException . class
+Arguments,()  ->   aPlayer . receiveMoney ( - 50 )
+Arguments,- 50
+Arguments,"""    (10)"""
+Arguments,aPlayer . getAllHandValues ()
+Arguments,"new   Card ( Rank . TWO ,  Suit . DIAMOND )"
+Arguments,Rank . TWO
+Arguments,Suit . DIAMOND
+Arguments,"""    (12)"""
+Arguments,aPlayer . getAllHandValues ()
+Arguments,"new   Card ( Rank . ACE ,  Suit . DIAMOND )"
+Arguments,Rank . ACE
+Arguments,Suit . DIAMOND
+Arguments,"""    (13)"""
+Arguments,aPlayer . getAllHandValues ()
+Arguments,"new   Card ( Rank . ACE ,  Suit . CLUBS )"
+Arguments,Rank . ACE
+Arguments,Suit . CLUBS
+Arguments,""" (1, 11)"""
+Arguments,bPlayer . getAllHandValues ()
+Arguments,3
+Arguments,3
+Arguments,aPlayer . getPlayerNumber ()
+Arguments,new   Bet ( 100 )
+Arguments,100
+Arguments,100
+Arguments,aPlayer . getBet () . getAmount ()
+Arguments,new   Bet ( 200 )
+Arguments,200
+Arguments,new   Bet ( 200 )
+Arguments,200
+Arguments,new   Bet ( 100 )
+Arguments,100
+Arguments,new   Bet ( 200 )
+Arguments,200
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,=
+Operators,new
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,-
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,.
+Operators,new
+Operators,.
+Operators,.
+Operators,new
+Operators,new
+Operators,new
+Operators,new

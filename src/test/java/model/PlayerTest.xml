@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.srcML.org/srcML/src" revision="1.0.0" language="Java" filename="PlayerTest.java"><package>package <name>model</name>;</package>
+
+
+<import>import <name><name>exception</name><operator>.</operator><name>InvalidMoneyAmountException</name></name>;</import>
+<import>import <name><name>org</name><operator>.</operator><name>junit</name><operator>.</operator><name>jupiter</name><operator>.</operator><name>api</name><operator>.</operator><name>AfterEach</name></name>;</import>
+<import>import <name><name>org</name><operator>.</operator><name>junit</name><operator>.</operator><name>jupiter</name><operator>.</operator><name>api</name><operator>.</operator><name>BeforeEach</name></name>;</import>
+<import>import <name><name>org</name><operator>.</operator><name>junit</name><operator>.</operator><name>jupiter</name><operator>.</operator><name>api</name><operator>.</operator><name>Test</name></name>;</import>
+
+<import>import <name><name>java</name><operator>.</operator><name>util</name><operator>.</operator><name>List</name></name>;</import>
+
+<import>import static <name><name>org</name><operator>.</operator><name>junit</name><operator>.</operator><name>jupiter</name><operator>.</operator><name>api</name><operator>.</operator><name>Assertions</name><operator>.</operator><name>*</name></name>;</import>
+
+<class>class <name>PlayerTest</name> <block>{
+    <decl_stmt><decl><type><name>Player</name></type> <name>aPlayer</name></decl>;</decl_stmt>
+
+    <function><annotation>@<name>BeforeEach</name></annotation>
+    <type><name>void</name></type> <name>setUp</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><name>aPlayer</name> <operator>=</operator> <operator>new</operator> <call><name>Player</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>addCardToHand</name></name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>KING</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>AfterEach</name></annotation>
+    <type><name>void</name></type> <name>tearDown</name><parameter_list>()</parameter_list> <block>{<block_content>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>addCardToHand</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>addCardToHand</name></name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>TWO</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>addCardToHand</name></name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>QUEEN</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">22</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>getHandValue</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name><name>List</name><argument_list type="generic">&lt;<argument><name>Card</name></argument>&gt;</argument_list></name></type> <name>cardList</name> <init>= <expr><call><name><name>aPlayer</name><operator>.</operator><name>hand</name><operator>.</operator><name>getCards</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>assertTrue</name><argument_list>(<argument><expr><call><name><name>cardList</name><operator>.</operator><name>get</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call><operator>.</operator><call><name>equals</name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>KING</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertTrue</name><argument_list>(<argument><expr><call><name><name>cardList</name><operator>.</operator><name>get</name></name><argument_list>(<argument><expr><literal type="number">1</literal></expr></argument>)</argument_list></call><operator>.</operator><call><name>equals</name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>TWO</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertTrue</name><argument_list>(<argument><expr><call><name><name>cardList</name><operator>.</operator><name>get</name></name><argument_list>(<argument><expr><literal type="number">2</literal></expr></argument>)</argument_list></call><operator>.</operator><call><name>equals</name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>QUEEN</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>balance</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">100</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>balance</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>withdrawValidAmount</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertDoesNotThrow</name><argument_list>(<argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>aPlayer</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><literal type="number">40</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <try>try <block>{<block_content>
+            <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><literal type="number">40</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">20</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>balance</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block> <catch>catch <parameter_list>(<parameter><decl><type><name>InvalidMoneyAmountException</name></type> <name>e</name></decl></parameter>)</parameter_list> <block>{<block_content>
+            <expr_stmt><expr><call><name>fail</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block></catch></try>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>withdrawTooMuch</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>aPlayer</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><literal type="number">101</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>withdraw0</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>aPlayer</name><operator>.</operator><name>withdraw</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>receiveMoney</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <try>try <block>{<block_content>
+            <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>receiveMoney</name></name><argument_list>(<argument><expr><literal type="number">50</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block> <catch>catch <parameter_list>(<parameter><decl><type><name>InvalidMoneyAmountException</name></type> <name>e</name></decl></parameter>)</parameter_list> <block>{<block_content>
+            <expr_stmt><expr><call><name>fail</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        </block_content>}</block></catch></try>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">150</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>balance</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>receiveMoney0</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>aPlayer</name><operator>.</operator><name>receiveMoney</name></name><argument_list>(<argument><expr><literal type="number">0</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>receiveMoneyNegative</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertThrows</name><argument_list>(<argument><expr><name><name>InvalidMoneyAmountException</name><operator>.</operator><name>class</name></name></expr></argument>, <argument><expr><lambda><parameter_list>()</parameter_list> -&gt;<block type="pseudo"><block_content> <expr><call><name><name>aPlayer</name><operator>.</operator><name>receiveMoney</name></name><argument_list>(<argument><expr><operator>-</operator><literal type="number">50</literal></expr></argument>)</argument_list></call></expr></block_content></block></lambda></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>getAllHandValues</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="string">"    (10)"</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>getAllHandValues</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>addCardToHand</name></name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>TWO</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="string">"    (12)"</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>getAllHandValues</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>addCardToHand</name></name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>ACE</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>DIAMOND</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="string">"    (13)"</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>getAllHandValues</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><name>Player</name></type> <name>bPlayer</name> <init>= <expr><operator>new</operator> <call><name>Player</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name><name>bPlayer</name><operator>.</operator><name>addCardToHand</name></name><argument_list>(<argument><expr><operator>new</operator> <call><name>Card</name><argument_list>(<argument><expr><name><name>Rank</name><operator>.</operator><name>ACE</name></name></expr></argument>, <argument><expr><name><name>Suit</name><operator>.</operator><name>CLUBS</name></name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="string">" (1, 11)"</literal></expr></argument>, <argument><expr><call><name><name>bPlayer</name><operator>.</operator><name>getAllHandValues</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>testPlayerNo</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>setPlayerNumber</name></name><argument_list>(<argument><expr><literal type="number">3</literal></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">3</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>getPlayerNumber</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>testBet</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name><name>aPlayer</name><operator>.</operator><name>setBet</name></name><argument_list>(<argument><expr><operator>new</operator> <call><name>Bet</name><argument_list>(<argument><expr><literal type="number">100</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><literal type="number">100</literal></expr></argument>, <argument><expr><call><name><name>aPlayer</name><operator>.</operator><name>getBet</name></name><argument_list>()</argument_list></call><operator>.</operator><call><name>getAmount</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>testBetEquality</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><operator>new</operator> <call><name>Bet</name><argument_list>(<argument><expr><literal type="number">200</literal></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><operator>new</operator> <call><name>Bet</name><argument_list>(<argument><expr><literal type="number">200</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+
+    <function><annotation>@<name>Test</name></annotation>
+    <type><name>void</name></type> <name>testBetInequality</name><parameter_list>()</parameter_list> <block>{<block_content>
+        <expr_stmt><expr><call><name>assertNotEquals</name><argument_list>(<argument><expr><operator>new</operator> <call><name>Bet</name><argument_list>(<argument><expr><literal type="number">100</literal></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><operator>new</operator> <call><name>Bet</name><argument_list>(<argument><expr><literal type="number">200</literal></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    </block_content>}</block></function>
+}</block></class></unit>
